@@ -79,6 +79,6 @@ class Users extends BaseController
         ];
 
         $this -> User -> save($data);
-        return redirect()->to('/users');
+        return redirect()->to('/user');
     }
 }

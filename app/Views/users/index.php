@@ -17,7 +17,6 @@
           foreach ($users as $data) : ?>
           <tr>
             <th scope="row"><?= $no; ?></th>
-            <!-- <td><?= $data['id_users']; ?></td> -->
             <td><?= $data['nama_users']; ?></td>
             <td><?= $data['kelamin_users']; ?></td>
             <td><?= $data['username']; ?></td>

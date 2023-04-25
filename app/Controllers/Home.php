@@ -6,6 +6,12 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $data = [
+            'judul' => 'Dashboard',
+            'page' => 'users/index',
+            'menu' => 'dashboard',
+            'submenu' => '',
+        ];
+        return view('../Views/layout/templateLTE', $data);
     }
 }
