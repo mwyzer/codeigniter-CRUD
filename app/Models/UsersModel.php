@@ -12,9 +12,9 @@ class UsersModel extends Model
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_users', 'kelamin_users', 'username', 'password'];
+    protected $allowedFields    = ['nama_users', 'kelamin_users', 'username', 'password', 'deleted_at'];
 
     // Dates
     protected $useTimestamps = false;

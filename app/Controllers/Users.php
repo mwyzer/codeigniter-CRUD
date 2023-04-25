@@ -61,6 +61,24 @@ class Users extends BaseController
             'password' => $password
         ];
         $this->User->Save($data);
-        return redirect()->to('users');
+        return redirect()->to('/users');
+    }
+    public function delete($id)
+    {
+        $this->User->delete($id);
+        return redirect()->to('/users');
+    }
+    public function trash(){
+        $data['users']=$this->User->onlyDeleted()->findAll();
+        return view('users/trash', $data);
+    }
+    public function restore($id){
+        $data=[
+            'id_users' => $id,
+            'deleted_at' => NULL
+        ];
+
+        $this -> User -> save($data);
+        return redirect()->to('/users');
     }
 }

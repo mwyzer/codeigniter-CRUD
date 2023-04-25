@@ -1,6 +1,6 @@
 <?php $this->extend('layout/template'); ?>
 <?php $this->section('content'); ?>
-<h3>Data Users</h3>
+<h3>Data Users Trash</h3>
   <table class="table">
       <thead>
         <tr>
@@ -22,8 +22,8 @@
             <td><?= $data['kelamin_users']; ?></td>
             <td><?= $data['username']; ?></td>
             <td>
-              <a href="<?= base_url('users/ubah/' . $data['id_users']); ?>" class="btn btn-sm btn-info">Ubah</a>
-              <a href="<?= base_url('users/delete/') . $data['id_users']; ?>" class="btn btn-sm btn-danger">Hapus</a>
+              <a href="<?= base_url('users/restore/' . $data['id_users']); ?>" class="btn btn-sm btn-info">Restore</a>
+
 
 
             </td>
@@ -31,6 +31,5 @@
           <?php $no++; endforeach; ?>
       </tbody>
     </table>
-    <a href="<?= base_url('users/add'); ?>" class="btn btn-sm btn-primary">ADD</a>
-    <a href="<?= base_url('users/trash'); ?>" class="btn btn-sm  btn-warning">TRASH</a> 
+
 <?php $this->endSection(); ?>
